@@ -1,11 +1,12 @@
-# Publish Twilight Bazaar using GitHub Pages
+# Publish Twilight Bazaar V8 to your existing GitHub Pages site
 
-1. Export your save backup from the previous website: Vault & Settings → Export Save.
-2. At github.com, select New repository. Name it `twilight-bazaar` and make it Public if using GitHub Free.
-3. Open the extracted Twilight_Bazaar_GitHub_Pages folder. Select **the files inside it**, not the parent folder, and use `Add file` → `Upload files` on the repository Code tab. Ensure `index.html` is visible at the top level (root) of the repository. Commit changes to `main`.
-4. Open repository `Settings` → `Pages` → `Build and deployment`. Choose `Deploy from a branch`, then `main` and `/(root)`, and Save.
-5. Open `https://YOUR-USERNAME.github.io/twilight-bazaar/` (replace YOUR-USERNAME with your GitHub username).
-6. When changing hosting addresses, import the JSON save under Vault & Settings → Import Save. Browser localStorage is origin-specific and won't move automatically.
-7. To publish future versions, replace the old site files in this same repo, commit changes to main, and Pages will publish the update to the same URL.
+1. **Backup first:** On the current site, Vault & settings → **Export save**.
+2. Unzip V8. Open its extracted folder. Select **every file inside** (not the folder).
+3. In `https://github.com/orcas0112/orcas0112.github.io`, stay in the main repository directory, click **Add file → Upload files**, and upload the individual files.
+4. Click **Commit changes** to `main`.
+5. **Don't change Pages settings**: `main / (root)` should already be configured; leave Custom domain blank.
+6. When the newest Pages run under **Actions** is green, open `https://orcas0112.github.io/`, and hard-refresh if necessary.
 
-Note: this includes the fun word-puzzle front page from V7.2. The word is discoverable in client-side JavaScript; it does not provide security or change how school filtering categorizes the site. GitHub Pages is public web hosting; don't place secrets in the files. OG images are external links, and availability/permission is not guaranteed.
+If you accidentally upload everything inside another folder, return to your repository's main directory and upload the **contents** of the ZIP there. You do not need to delete the previous nested folder for the root site to work.
+
+Your browser save stays tied to the same website URL/browser. Use **Import save** from your JSON backup if you change domains/browsers.

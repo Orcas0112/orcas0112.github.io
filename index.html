@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#17122d">
+  <meta name="theme-color" content="#080f21">
   <meta name="description" content="Twilight Bazaar — an independent, browser-local collectible pack simulator. No account connection.">
-  <title>Twilight Bazaar — Secret Entrance</title>
+  <title>Twilight Bazaar V8 — Collector Arcade</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="gate.css">
+  <link rel="stylesheet" href="v8.css">
+  <link rel="stylesheet" href="v8-gate.css">
   <script defer src="data.js"></script>
   <script defer src="app.js"></script>
   <script defer src="v7.js"></script>
   <script defer src="gate.js"></script>
+  <script defer src="v8.js"></script>
 </head>
 <body class="site-locked">
  <section class="entry-screen" id="entry-screen" aria-labelledby="entry-title">
   <div class="entry-stars" aria-hidden="true"></div>
   <main class="entry-card">
-   <div class="entry-topline"><span class="entry-brand">✦ TWILIGHT BAZAAR</span><span class="entry-version">V7.2 · SECRET ENTRANCE</span></div>
+   <div class="entry-topline"><span class="entry-brand">✦ TWILIGHT BAZAAR</span><span class="entry-version">V8 · SECRET ENTRANCE</span></div>
    <div class="entry-layout">
     <div class="entry-copy">
       <span class="entry-overline">A LITTLE SECRET IS WAITING</span>
@@ -43,17 +46,22 @@
  <div class="ambient ambient-a" aria-hidden="true"></div><div class="ambient ambient-b" aria-hidden="true"></div>
  <div class="app-shell">
   <header class="topbar">
-   <a class="brand" href="#home" aria-label="Twilight Bazaar home"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>Twilight <em>Bazaar</em></strong><small>WEB EDITION · V7.1</small></span></a>
+   <a class="brand" href="#home" aria-label="Twilight Bazaar home"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>Twilight <em>Bazaar</em></strong><small>COLLECTOR ARCADE · <span class="v8-version">V8</span></small></span></a>
    <div class="balances"><div class="wallet"><span class="wallet-icon">✦</span><span><strong id="tokens">0</strong><small>Local tokens</small></span></div><div class="wallet"><span class="wallet-icon shard">◈</span><span><strong id="shards">0</strong><small>Twilight shards</small></span></div></div>
    <button id="entry-lock" class="entry-exit" type="button" title="Return to the entrance">Leave Bazaar ↗</button>
   </header>
   <nav class="tabs" id="nav" aria-label="Main navigation">
-    <button class="active" data-tab="home">Explore</button><button data-tab="packs">Open packs</button><button data-tab="collection">Collection</button><button data-tab="shop">Special Shop <span class="nav-new">V7</span></button><button data-tab="events">Event hall</button><button data-tab="desk">Trade desk <span class="nav-new">NEW</span></button><button data-tab="progress">Achievements</button><button data-tab="history">Opening history <span class="nav-new">V6</span></button><button data-tab="market">Night market</button><button data-tab="trade">Trading altar</button><button data-tab="vault">Vault & settings</button>
+    <button class="active" data-tab="home">Explore</button><button data-tab="packs">Open packs</button><button data-tab="collection">Collection</button><button data-tab="shop">Special Shop <span class="nav-new">SHOP</span></button><button data-tab="events">Event hall</button><button data-tab="desk">Trade desk <span class="nav-new">TRADE</span></button><button data-tab="progress">Achievements</button><button data-tab="history">Opening history <span class="nav-new">LOG</span></button><button data-tab="market">Night market</button><button data-tab="trade">Trading altar</button><button data-tab="vault">Vault & settings</button>
   </nav>
   <main>
    <section id="home" class="page active">
-    <div class="hero"><div class="hero-copy"><span class="eyebrow">✧ THE NIGHT MARKET IS OPEN ✧</span><h1>Collect something <em>extraordinary.</em></h1><p>Discover familiar Blooks, chase rare pulls, and grow a collection of your own. Everything here runs locally in your browser.</p><div class="hero-actions"><button class="primary big" data-go="packs">Open a pack <span>→</span></button><button class="ghost big" data-go="events">Event hall ✧</button></div><div class="hero-foot">Independent fan project <span>·</span> No login <span>·</span> No real Blooket tokens</div></div><div class="hero-scene"><div class="orb"></div><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="hero-preview" id="hero-preview" aria-label="An available Blook from the collection"></div><span class="scene-spark spark-1">✦</span><span class="scene-spark spark-2">✧</span></div></div>
-    <div class="section-head"><div><span class="eyebrow">START EXPLORING</span><h2>Pick your next adventure</h2></div><p>Rarity is part of the thrill. Each 50-token pack uses its listed odds.</p></div>
+    <div class="hero"><div class="hero-copy"><span class="eyebrow">NEW LOOK · SAME COLLECTION</span><h1>Build your dream <em>collection.</em></h1><p>Open original Blook packs, hunt rare discoveries, and keep the Blooks you love. Your collection, your pace, your arcade.</p><div class="hero-actions"><button class="primary big" data-go="packs">Open a pack <span>→</span></button><button class="ghost big" data-go="events">Event hall ✧</button></div><div class="hero-foot">Independent fan project <span>·</span> No login <span>·</span> No real Blooket tokens</div><div class="v8-hero-metrics"><div class="v8-hero-stat"><strong id="v8-hero-unique">0 / 318</strong><small>discovered</small></div><div class="v8-hero-stat"><strong id="v8-hero-packs">0</strong><small>packs opened</small></div></div></div><div class="hero-scene"><div class="orb"></div><div class="orbit orbit-1"></div><div class="orbit orbit-2"></div><div class="hero-preview" id="hero-preview" aria-label="An available Blook from the collection"></div><span class="scene-spark spark-1">✦</span><span class="scene-spark spark-2">✧</span></div></div>
+    <div class="v8-dashboard" aria-label="Your collector dashboard">
+      <div class="v8-dash-card"><span class="v8-dash-icon">◈</span><div><strong id="v8-stat-percent">0%</strong><small>Collection complete</small></div></div>
+      <div class="v8-dash-card"><span class="v8-dash-icon">✦</span><div><strong id="v8-stat-seals">0</strong><small>Event seals available</small></div></div>
+      <div class="v8-dash-card"><span class="v8-dash-icon">★</span><div><strong id="v8-stat-bonus">0</strong><small>Bonus discoveries</small></div></div>
+    </div>
+    <div class="v8-pack-head"><div><span class="eyebrow">PICK A PACK · CHASE A PULL</span><h2>Pack wall</h2></div><div class="v8-pack-toolbar"><label class="sr-only" for="v8-pack-search">Search packs</label><input id="v8-pack-search" type="search" placeholder="Search packs…" autocomplete="off"><label class="sr-only" for="v8-pack-category">Filter packs</label><select id="v8-pack-category"><option value="all">All packs</option><option value="paid">50-token packs</option><option value="free">Starter galleries</option></select></div></div>
     <div class="featured-packs" id="featured-packs"></div>
     <div class="info-strip"><span class="bullet-star">✧</span><div><b>Using OG Blook artwork links</b><p>Images load directly from the URLs listed in your original extension, when those remote hosts allow access. Unavailable images stay clearly labeled; nothing fake is substituted.</p></div></div>
    </section>
@@ -66,13 +74,13 @@
     <div class="result-zone" id="pull-result" aria-live="polite"><span class="eyebrow">YOUR NEXT DISCOVERY</span><p>The stripes will reveal your next Blook here.</p></div>
    </section>
    <section id="collection" class="page">
-    <div class="section-head"><div><span class="eyebrow">YOUR INVENTORY</span><h2>My collection</h2></div><p>Explore the full released-Blook archive. Event and retired Blooks can be unlocked through the Event Hall when offered.</p></div>
+    <div class="section-head"><div><span class="eyebrow">YOUR INVENTORY</span><h2>My collection</h2></div><p>See every Blook, check how to obtain it, and track your collection. Special Blooks are always available in the Special Shop.</p></div>
     <div class="collection-summary"><div class="stat-card"><span>Unique discovered</span><b id="stat-unique">0</b></div><div class="stat-card"><span>Total collected</span><b id="stat-total">0</b></div><div class="stat-card"><span>Top rarity found</span><b id="stat-top">—</b></div><div class="stat-card"><span>Local resale value*</span><b id="stat-worth">0</b></div></div>
     <div class="collection-controls"><div class="filter" id="filters"><button class="active" data-filter="All">All</button><button data-filter="Common">Common</button><button data-filter="Uncommon">Uncommon</button><button data-filter="Rare">Rare</button><button data-filter="Epic">Epic</button><button data-filter="Legendary">Legendary</button><button data-filter="Chroma">Chroma</button><button data-filter="Unique">Unique</button><button data-filter="Mystical">Mystical</button></div><label class="source-label"><span class="sr-only">Filter Blook source</span><select id="source-filter" aria-label="Filter source"><option value="All">All sources</option><option value="Pack">Pack contents</option><option value="Starter">Starter & colors</option><option value="Seasonal">Seasonal</option><option value="Event">Event rewards</option><option value="Retired">Retired</option><option value="Unique">Unique</option><option value="Pack archive">Pack archive</option><option value="Mystical">Mystical</option><option value="Unreleased">Unreleased</option></select></label><label class="source-label"><span class="sr-only">Sort collection</span><select id="collection-sort" aria-label="Sort collection"><option value="name">Name A–Z</option><option value="rarity">Rarity first</option><option value="owned">Most owned</option><option value="duplicates">Most duplicates</option></select></label><label class="search-label"><span class="sr-only">Search collection</span><input id="collection-search" placeholder="Search Blooks..." type="search"></label></div><div class="collection-switches"><label><input type="checkbox" id="only-owned"> Only my Blooks</label><label><input type="checkbox" id="only-faves"> Favorites only</label><small>*Local simulator resale prices only; not actual Blooket values.</small></div><p class="catalog-help">Click <strong>How to obtain</strong> on any Blook. All non-Mystical archive Blooks are in the Special Shop; the five Mysticals use trials. Each detail panel explains the simulator method and original context.</p><div id="collection-grid" class="cards collection-grid"></div>
    </section>
 
    <section id="shop" class="page">
-    <div class="shop-hero"><div><span class="eyebrow">V7 · ALL SPECIALS, ALWAYS AVAILABLE</span><h2>The Special Shop</h2><p>Collect every non-Mystical seasonal, retired, event, Unique, and archival Blook here. No rotation to wait for. Prices and availability are <strong>Twilight Bazaar-only rules</strong>, not official Blooket offers.</p></div><div class="shop-wallet"><small>YOUR TOKENS</small><strong id="shop-wallet">0</strong><small>All purchases are local-only</small></div></div>
+    <div class="shop-hero"><div><span class="eyebrow">V8 · ALL SPECIALS, ALWAYS AVAILABLE</span><h2>The Special Shop</h2><p>Collect every non-Mystical seasonal, retired, event, Unique, and archival Blook here. No rotation to wait for. Prices and availability are <strong>Twilight Bazaar-only rules</strong>, not official Blooket offers.</p></div><div class="shop-wallet"><small>YOUR TOKENS</small><strong id="shop-wallet">0</strong><small>All purchases are local-only</small></div></div>
     <div class="shop-tools"><label><span class="sr-only">Search Special Shop</span><input id="shop-search" type="search" placeholder="Find a special Blook..."></label><label><span class="sr-only">Special Shop category</span><select id="shop-filter"><option value="All">All special Blooks</option><option value="Seasonal">Seasonal</option><option value="Event">Event rewards</option><option value="Retired">Retired</option><option value="Unique">Unique</option><option value="Pack archive">Pack archive</option><option value="Unreleased">Historical / unreleased</option><option value="Starter">Free starters</option></select></label><label><input type="checkbox" id="shop-missing"> Missing only</label></div>
     <p class="shop-clarification">All 5 original Mysticals stay exclusively in <strong>Event Hall → Mystical Trials</strong>. Unreleased references are available <strong>only in this fan simulator</strong>; this does not make them official Blooket releases.</p>
     <div id="shop-stats" class="shop-statline"></div><div class="shop-grid" id="shop-grid"></div>
