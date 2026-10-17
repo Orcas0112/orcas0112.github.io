@@ -1,0 +1,16 @@
+/* New original gate presentation, keeping the existing treasure-hunt password mechanic. */
+body.site-locked{background:radial-gradient(circle at 30% 20%,#2442a9,#090f23 58%,#080f21)}
+.entry-screen{background:radial-gradient(circle at 70% 30%,#153b9b77,transparent 45%),radial-gradient(circle at 0% 80%,#512a9d55,transparent 45%),#080f21}
+.entry-card{max-width:1050px;border-radius:28px;background:#121f3b;border:1px solid #526baa;box-shadow:0 28px 100px #020a20cc}
+.entry-brand,.entry-overline{color:#87ebff;font-family:Outfit,system-ui,sans-serif;font-weight:900}
+.entry-version{color:#a9bcf7;font-weight:900}
+.entry-copy h1{font:900 clamp(36px,5.3vw,68px)/1.03 Outfit,system-ui,sans-serif;letter-spacing:-1.8px;color:#fff}
+.entry-copy h1 em{font-style:normal;color:#ffe083}
+.entry-copy p{color:#bfcee9}
+.entry-form label{color:#94bcff;font-weight:900}
+.entry-input-row input{background:#0b1932;border-color:#5572a4;border-radius:14px}
+.entry-submit{background:linear-gradient(105deg,#427dff,#7463f7);border-color:#91b4ff;border-radius:13px;color:#fff}
+.entry-moon{background:radial-gradient(circle at 25% 25%,#cffff5,#76dbef 44%,#758be1);border:5px solid #c2edff;box-shadow:0 0 100px #6acbf266}
+.entry-moon-note{background:#192b57;border:1px solid #7090cd}
+.entry-clue{background:#1b3157;border:1px solid #6594ca}.entry-clue strong{color:#fbe688}
+.entry-footer{color:#a6b9d9;border-color:#405477}
